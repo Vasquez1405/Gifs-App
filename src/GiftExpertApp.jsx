@@ -5,7 +5,7 @@ import { AddCategory, GifGrid } from './components';
 
 export const GiftExpertApp = () => {
 
-    const [categories, setCategories] = useState(['One Punch']);
+    const [categories, setCategories] = useState(['Valorant']);
 
     const onAddCategory = (newCategory) => {
 
@@ -14,8 +14,11 @@ export const GiftExpertApp = () => {
             return;
         };
 
-        //agregar la categoria nueva
-        setCategories([newCategory, ...categories]);
+        //agregar la categoria nueva manteniendo la anterior
+        //setCategories([newCategory, ...categories]);
+
+        //agregar la categoria nueva eliminando la anterior
+        setCategories([newCategory]);
     }
 
   return (
